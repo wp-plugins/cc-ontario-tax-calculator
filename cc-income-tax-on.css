@@ -1,0 +1,90 @@
+.CCT-Widget {
+  background-color: #ffffff;
+  margin: 0px;
+  max-width: 300px;
+  min-width: 230px;
+  padding: 5px;
+  border: 1px solid #000000;
+  font: normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}	
+
+.CCT-Widget input[type=text] {
+  background: #FFFFFF;
+  clear: none;
+  outline:none;
+  text-align:left;
+  width: 85%;
+  padding: 5px;
+  border: #000000 1px solid;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font: normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
+.CCT-Widget label{
+    width:140px;
+    text-align:right;
+    padding-right: 5px;
+    display:inline-block;
+	font: normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
+.ccm-rowdiv{
+    overflow: hidden; 
+    padding:3px;
+}
+
+.ccm-leftdiv{
+    float:left; 
+	padding-top:9px;
+}
+
+.ccm-rightdiv{
+    overflow: hidden;
+}
+
+.ccm-leftresultdiv {
+    float:left; 
+	padding-bottom:9px;
+}
+
+.ccm-rightresultdiv{
+	padding-bottom:9px;
+    overflow: hidden;
+	min-height: 15px;    
+    font-weight: bold;
+}
+
+.CCT-WidgetTitle  {
+  text-align: center;
+  font: normal bold 16px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.CCT-WidgetTitle a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.CCT-WidgetLine{
+    border-bottom: 1px #000000 solid;
+    overflow: visible;
+    margin: 5px 0 5px 0;
+}
+
+.CCT-WidgetSignature {
+    text-align:right; 
+	padding-top:5px; 
+	font: normal normal 10px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
+.CCT-WidgetSignature a {
+    color:inherit; 
+	text-decoration:none;
+}
+
+.CCT-WidgetSignature a:hover {
+    text-decoration:underline;
+}
