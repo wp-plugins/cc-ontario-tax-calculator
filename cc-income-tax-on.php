@@ -4,7 +4,7 @@
 Plugin Name: CC Ontario Income Tax Calculator
 Plugin URI: http://incometax.calculatorscanada.ca/income-tax-widgets/
 Description: Ontario Income Tax Calculator 2013
-Version: 0.0.1
+Version: 0.2013.1
 Author: Calculators Canada
 Author URI: http://calculatorscanada.ca/
 License: GPL2
