@@ -4,7 +4,7 @@ Donate link: http://incometax.calculatorscanada.ca
 Tags: Ontario, Canada, income tax calculator, calculator, sidebar, widget, plugin, financial, taxes
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 0.2013.1
+Stable tag: 0.2013.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,8 +39,11 @@ Please [contact us](http://calculatorscanada.ca/contact) if you have further que
 
 == Changelog ==
 
+= 0.2013.2 =
+* Fixed minor bug (Undefined variable)
+
 = 0.2013.1 =
-* Initial beta release. Fiscal year 2013
+* Initial beta release for fiscal year 2013
 
 == Upgrade Notice ==
 * Initial beta release
