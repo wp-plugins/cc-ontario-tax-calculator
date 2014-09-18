@@ -13,7 +13,7 @@ Add a free simple customizable Ontario income tax calculator to your web site.
 == Description ==
 
 This is simple [Ontario tax calculator](http://incometax.calculatorscanada.ca/ontario) calculates income taxes for residents of Ontario province in Canada for 2014 fiscal year. 
-Install ealier version ([v2013.2](http://plugins.svn.wordpress.org/cc-ontario-tax-calculator/tags/0.2013.2/)) if you need tax calculator for 2013
+Install ealier version ([v2013.2](https://wordpress.org/plugins/cc-ontario-tax-calculator/developers/)) if you need tax calculator for 2013
 
 Calculator is very easy customizable: you can change color of background, borders and text to match your web site's theme and change widget title.
 
