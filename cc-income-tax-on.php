@@ -3,8 +3,8 @@
 /*
 Plugin Name: CC Ontario Income Tax Calculator
 Plugin URI: http://incometax.calculatorscanada.ca/income-tax-widgets/
-Description: Ontario Income Tax Calculator 2013
-Version: 0.2014.1
+Description: Ontario Income Tax Calculator 2014
+Version: 0.2014.2
 Author: Calculators Canada
 Author URI: http://calculatorscanada.ca/
 License: GPL2
@@ -32,7 +32,7 @@ class cc_income_tax_on extends WP_Widget {
 	function __construct() {
 		$options = array(		
 			'name' => __('CC Ontario Tax Calculator','cctextdomain'), 
-			'description' => __('Ontario Tax Calculator 2013','cctextdomain')
+			'description' => __('Ontario Tax Calculator 2014','cctextdomain')
 		);
 		parent::__construct('cc_income_tax_on', '', $options);
 	}
@@ -46,7 +46,7 @@ class cc_income_tax_on extends WP_Widget {
         //print_r('id_base: '.$this->id_base.' ');
 
         $defaults = array(
-            'title' => __('Ontario Tax Calculator 2013', 'cctextdomain'),
+            'title' => __('Ontario Tax Calculator 2014', 'cctextdomain'),
             'bg_color' => '#ffffff',
             'border_color' => '#000000',
             'text_color' => '#000000'
