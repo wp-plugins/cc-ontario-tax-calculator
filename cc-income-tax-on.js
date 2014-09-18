@@ -4,11 +4,11 @@ var $J = jQuery.noConflict();
 $J( document ).ready(function() {
 	// runtime events
 	
-	$J(".income").keydown(function(event) {
+	$J(".ontario-income").keydown(function(event) {
 		if(!(isIntegerKey(event))) event.preventDefault();
 	});	
 
-	$J(".income").keyup(function( ) {
+	$J(".ontario-income").keyup(function( ) {
 		calculate_income_tax_on($J(this).closest("aside").attr("id"));
 	});
 
@@ -22,7 +22,7 @@ function format_id(id,name)
 function calculate_income_tax_on(id)
 {
     var income_id = '#' + id + '-' + 'income';
-	var income = $J(income_id).val();
+	var income = parseFloat($J(income_id).val());
 	
     // clear output
 	$J('#' + id + '-' + 'ProvincialTax').html("");
@@ -34,23 +34,25 @@ function calculate_income_tax_on(id)
 	// if no data entered
 	if (isNaN(income) || income == "") return;
 	
-    // calculate ON provincial taxes 2013
+    // calculate ON provincial taxes 2014
 	ProvincialTax = 0; 
     tmpIncome = income;
-    if (tmpIncome > 509000) { ProvincialTax += (tmpIncome - 509000) * 20.53 / 100; tmpIncome = 509000; }
-    if (tmpIncome > 82422) { ProvincialTax += (tmpIncome - 82422) * 17.41 / 100; tmpIncome = 82422; }
-    if (tmpIncome > 79448) { ProvincialTax += (tmpIncome - 79448) * 13.39 / 100; tmpIncome = 79448; }
-    if (tmpIncome > 69963) { ProvincialTax += (tmpIncome - 69963) * 10.98 / 100; tmpIncome = 69963; }
-    if (tmpIncome > 39723) { ProvincialTax += (tmpIncome - 39723) * 9.15 / 100; tmpIncome = 39723; }
-    if (tmpIncome > 9574) { ProvincialTax += (tmpIncome - 9574) * 5.05 / 100; }
+    if (tmpIncome > 220000) { ProvincialTax += (tmpIncome - 220000) * 20.53 / 100; tmpIncome = 220000; }
+    if (tmpIncome > 150000) { ProvincialTax += (tmpIncome - 150000) * 18.97 / 100; tmpIncome = 150000; }
+    if (tmpIncome > 83237) { ProvincialTax += (tmpIncome - 83237) * 17.41 / 100; tmpIncome = 83237; }
+    if (tmpIncome > 80242) { ProvincialTax += (tmpIncome - 80242) * 13.39 / 100; tmpIncome = 80242; }
+    if (tmpIncome > 70651) { ProvincialTax += (tmpIncome - 70651) * 10.98 / 100; tmpIncome = 70651; }
+    if (tmpIncome > 40120) { ProvincialTax += (tmpIncome - 40120) * 9.15 / 100; tmpIncome = 40120; }
+    if (tmpIncome > 18502) { ProvincialTax += (tmpIncome - 18502) * 5.05 / 100; tmpIncome = 18502; }
+    if (tmpIncome > 14086) { ProvincialTax += (tmpIncome - 14086) * 10.10 / 100; }
 
-    // calculate Canadian federal taxes 2013
+    // calculate Canadian federal taxes 2014
     FederalTax = 0;
     tmpIncome = income;
-    if (tmpIncome > 135054) { FederalTax += (tmpIncome - 135054) * 29 / 100; tmpIncome = 135054; }
-    if (tmpIncome > 87123) { FederalTax += (tmpIncome - 87123) * 26 / 100; tmpIncome = 87123; }
-    if (tmpIncome > 43561) { FederalTax += (tmpIncome - 43561) * 22 / 100; tmpIncome = 43561; }
-    if (tmpIncome > 11038) { FederalTax += (tmpIncome - 11038) * 15 / 100; }
+    if (tmpIncome > 136270) { FederalTax += (tmpIncome - 136270) * 29 / 100; tmpIncome = 136270; }
+    if (tmpIncome > 87907) { FederalTax += (tmpIncome - 87907) * 26 / 100; tmpIncome = 87907; }
+    if (tmpIncome > 43953) { FederalTax += (tmpIncome - 43953) * 22 / 100; tmpIncome = 43953; }
+    if (tmpIncome > 11138) { FederalTax += (tmpIncome - 11138) * 15 / 100; }
 
     TotalTax = ProvincialTax + FederalTax;
 	AverageRate = TotalTax / income * 100;

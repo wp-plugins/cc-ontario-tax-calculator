@@ -10,10 +10,10 @@ function load_cc_income_tax_on_calc($id, $title, $show_url = 0, $bg_color, $bord
 	 	<div class="CCT-WidgetTitle CCT-WidgetTitle-<?php echo $id; ?>"><?php echo $title; ?></div>		   
         <div class="ccm-rowdiv">
 			 <div class="ccm-leftdiv">
-                <label for="<?php echo $id; ?>-income">Income in 2013 $ :</label>
+                <label for="<?php echo $id; ?>-income">Income in 2014 $ :</label>
 			 </div>
 			 <div class="ccm-rightdiv">
-  	    	    <input id="<?php echo $id; ?>-income" class="income" type="text" placeholder="enter amount">
+  	    	    <input id="<?php echo $id; ?>-income" class="ontario-income" type="text" placeholder="enter amount">
 			 </div>
         </div>
         <div class="ccm-rowdiv">
