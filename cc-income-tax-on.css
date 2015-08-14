@@ -30,26 +30,26 @@
 	font: normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
 
-.ccm-rowdiv{
+.CCT-rowdiv{
     overflow: hidden; 
     padding:3px;
 }
 
-.ccm-leftdiv{
+.CCT-leftdiv{
     float:left; 
 	padding-top:9px;
 }
 
-.ccm-rightdiv{
+.CCT-rightdiv{
     overflow: hidden;
 }
 
-.ccm-leftresultdiv {
+.CCT-leftresultdiv {
     float:left; 
 	padding-bottom:9px;
 }
 
-.ccm-rightresultdiv{
+.CCT-rightresultdiv{
 	padding-bottom:9px;
     overflow: hidden;
 	min-height: 15px;    

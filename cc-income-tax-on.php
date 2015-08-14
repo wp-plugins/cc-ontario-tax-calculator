@@ -3,13 +3,13 @@
 /*
 Plugin Name: CC Ontario Income Tax Calculator
 Plugin URI: http://incometax.calculatorscanada.ca/income-tax-widgets/
-Description: Ontario Income Tax Calculator 2014
-Version: 0.2014.2
+Description: Ontario Income Tax Calculator 2015
+Version: 0.2015.1
 Author: Calculators Canada
 Author URI: http://calculatorscanada.ca/
 License: GPL2
 
-Copyright 2014 CalculatorsCanada.CA (info@calculatorscanada.ca)
+Copyright 2013-2015 CalculatorsCanada.CA (info@calculatorscanada.ca)
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or
@@ -32,7 +32,7 @@ class cc_income_tax_on extends WP_Widget {
 	function __construct() {
 		$options = array(		
 			'name' => __('CC Ontario Tax Calculator','cctextdomain'), 
-			'description' => __('Ontario Tax Calculator 2014','cctextdomain')
+			'description' => __('Ontario Tax Calculator 2015','cctextdomain')
 		);
 		parent::__construct('cc_income_tax_on', '', $options);
 	}
@@ -46,7 +46,7 @@ class cc_income_tax_on extends WP_Widget {
         //print_r('id_base: '.$this->id_base.' ');
 
         $defaults = array(
-            'title' => __('Ontario Tax Calculator 2014', 'cctextdomain'),
+            'title' => __('Ontario Tax Calculator 2015', 'cctextdomain'),
             'bg_color' => '#ffffff',
             'border_color' => '#000000',
             'text_color' => '#000000'
@@ -134,9 +134,9 @@ add_action('widgets_init', create_function('', 'return register_widget("cc_incom
 
 // load widget style and javascript files
 function cc_income_tax_on_scripts() {
-	wp_register_style( 'cc-income-tax-on', plugins_url('/cc-income-tax-on.css',__FILE__)); 
+	wp_register_style( 'cc-income-tax-on', plugins_url('/cc-income-tax-on.css',__FILE__), NULL, '0.2015.1'); 
 	wp_enqueue_style( 'cc-income-tax-on' );
-    wp_enqueue_script( 'cc-income-tax-on', plugins_url('/cc-income-tax-on.js',__FILE__), array('jquery'), '0.1.0', true );
+    wp_enqueue_script( 'cc-income-tax-on', plugins_url('/cc-income-tax-on.js',__FILE__), array('jquery'), '0.2015.1', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'cc_income_tax_on_scripts' );
@@ -150,6 +150,26 @@ function cc_income_tax_on_admin( $hook_suffix ) {
 
 add_action( 'admin_enqueue_scripts', 'cc_income_tax_on_admin' );
 
+function cc_income_tax_on_shortcode($atts, $content=null)
+{
+	$atts = shortcode_atts (
+        array(  'title'=>'Ontario tax calculator',
+                 'dev_credit'=>'1',
+                 'bg_color'=>'#ffffff',
+                 'border_color'=>'#cccccc',
+                 'text_color'=>'#000000'
+              ),
+        $atts
+    );
+   if ( $atts['dev_credit'] && !empty($atts['title']))
+		 $atts['title'] = '<a href="http://incometax.calculatorscanada.ca/ontario" target="_blank">' . $atts['title'] . '</a>';		
+    ob_start();
+    load_cc_income_tax_on_calc('cc_income_tax_on_shortcode', $atts['title'],  $atts['dev_credit'], $atts['bg_color'], $atts['border_color'], $atts['text_color']);
+    $widget = ob_get_contents();
+    ob_end_clean();
+    return trim($widget);
+}
 
+add_shortcode('cc_income_tax_on','cc_income_tax_on_shortcode');
 
 ?>

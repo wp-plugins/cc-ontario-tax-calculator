@@ -8,59 +8,59 @@ function load_cc_income_tax_on_calc($id, $title, $show_url = 0, $bg_color, $bord
 
 <div class="CCT-Widget CCT-Widget-<?php echo $id; ?>">
 	 	<div class="CCT-WidgetTitle CCT-WidgetTitle-<?php echo $id; ?>"><?php echo $title; ?></div>		   
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftdiv">
-                <label for="<?php echo $id; ?>-income">Income in 2014 $ :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftdiv">
+                <label for="<?php echo $id; ?>-income">Income in 2015 $ :</label>
 			 </div>
-			 <div class="ccm-rightdiv">
+			 <div class="CCT-rightdiv">
   	    	    <input id="<?php echo $id; ?>-income" class="ontario-income" type="text" placeholder="enter amount">
 			 </div>
         </div>
-        <div class="ccm-rowdiv">
+        <div class="CCT-rowdiv">
     		<div class="CCT-WidgetLine CCT-WidgetLine-<?php echo $id; ?>"></div>
 		</div>
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftresultdiv">
-                <label for="<?php echo $id; ?>-ProvincialTax">Provincial tax $ :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftresultdiv">
+                <label for="<?php echo $id; ?>-ProvincialTax">Provincial tax :</label>
 			 </div>
-			 <div class="ccm-rightresultdiv">
+			 <div class="CCT-rightresultdiv">
                 <span id="<?php echo $id; ?>-ProvincialTax" class=""></span>
 			 </div>
         </div>
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftresultdiv">
-                <label for="<?php echo $id; ?>-FederalTax">Federal tax $ :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftresultdiv">
+                <label for="<?php echo $id; ?>-FederalTax">Federal tax :</label>
 			 </div>
-			 <div class="ccm-rightresultdiv">
+			 <div class="CCT-rightresultdiv">
                 <span id="<?php echo $id; ?>-FederalTax" class=""></span>
 			 </div>
         </div>
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftresultdiv">
-                <label for="<?php echo $id; ?>-TotalTax">Total tax $ :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftresultdiv">
+                <label for="<?php echo $id; ?>-TotalTax">Total tax :</label>
 			 </div>
-			 <div class="ccm-rightresultdiv">
+			 <div class="CCT-rightresultdiv">
                 <span id="<?php echo $id; ?>-TotalTax" class=""></span>
 			 </div>
         </div>
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftresultdiv">
-                <label for="<?php echo $id; ?>-AverageRate">Average tax rate % :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftresultdiv">
+                <label for="<?php echo $id; ?>-AverageRate">Average tax rate :</label>
 			 </div>
-			 <div class="ccm-rightresultdiv">
+			 <div class="CCT-rightresultdiv">
                 <span id="<?php echo $id; ?>-AverageRate" class=""></span>
 			 </div>
         </div>
-        <div class="ccm-rowdiv">
-			 <div class="ccm-leftresultdiv">
-                <label for="<?php echo $id; ?>-AfterTaxIncome">After-tax income $ :</label>
+        <div class="CCT-rowdiv">
+			 <div class="CCT-leftresultdiv">
+                <label for="<?php echo $id; ?>-AfterTaxIncome">After-tax income :</label>
 			 </div>
-			 <div class="ccm-rightresultdiv">
+			 <div class="CCT-rightresultdiv">
                 <span id="<?php echo $id; ?>-AfterTaxIncome" class=""></span>
 			 </div>
         </div>
         <?php if ($show_url) { ?>
-    		<div class="ccm-rowdiv" >
+    		<div class="CCT-rowdiv" >
                 <div class="CCT-WidgetSignature CCT-WidgetSignature-<?php echo $id; ?>">Provided by <a href="http://CalculatorsCanada.ca" target="_blank">CalculatorsCanada.ca</a></div>
 		    </div>
         <?php } ?>
