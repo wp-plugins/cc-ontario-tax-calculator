@@ -28,13 +28,16 @@ OR
 Use [cc_income_tax_on] short code if you want embed the mortgage calculator into a post instead of adding it as a widget on sidebar.
 
 Short code parameters are:
+
   * title (optional) - set calculator's title (default - "Ontario tax calculator")
   * bg_color (optional) - set background color (default - "#ffffff")
   * border_color (optional) - set border color (default - "#cccccc")
   * text_color (optional) - set text color (default - "#000000")
   * dev_credit (optional) - show developer's credit (default - "1") 
 
-Example of shortcode usage: [cc_income_tax_on title="Income tax calculator" bg_color="#eaf4d7" border_color="#94c738"]
+Example of shortcode usage: 
+
+[cc_income_tax_on title="Income tax calculator" bg_color="#eaf4d7" border_color="#94c738"]
 
 Use [Color Picker](http://www.colorpicker.com/) to get hex code of color you need. 
 
